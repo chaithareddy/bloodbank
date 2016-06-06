@@ -1,0 +1,36 @@
+ERROR 2016-06-05 22:09:25 unity.glib.dbus.server GLibDBusServer.cpp:538 DBus name lost 'org.gnome.Shell'
+ERROR 2016-06-05 22:09:25 unity.glib.dbus.server GLibDBusServer.cpp:538 DBus name lost 'com.canonical.Unity'
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+WARN  2016-06-05 22:10:05 unity.key.gnome.grabber GnomeKeyGrabber.cpp:94 Trying to grab a disabled action, we skip it
+ERROR 2016-06-05 22:10:11 unity.session.gnome GnomeSessionManager.cpp:419 logind CanHibernate call failed: Timed out waiting for proxy
+WARN  2016-06-05 22:10:11 unity.glib.dbus.proxy GLibDBusProxy.cpp:403 Cannot call method CanHibernate: Timed out waiting for proxy
+ERROR 2016-06-05 22:10:11 unity.session.gnome GnomeSessionManager.cpp:419 logind CanSuspend call failed: Timed out waiting for proxy
+WARN  2016-06-05 22:10:11 unity.glib.dbus.proxy GLibDBusProxy.cpp:403 Cannot call method CanSuspend: Timed out waiting for proxy
+ERROR 2016-06-05 22:10:11 unity.session.gnome GnomeSessionManager.cpp:382 Gnome Session call failed: Timed out waiting for proxy
+WARN  2016-06-05 22:10:11 unity.glib.dbus.proxy GLibDBusProxy.cpp:403 Cannot call method CanShutdown: Timed out waiting for proxy
+WARN  2016-06-05 22:10:27 unity.glib.dbus.proxy GLibDBusProxy.cpp:487 Calling method "HibernateAllowed" on object path: "/org/freedesktop/UPower" failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method 'HibernateAllowed'
+ERROR 2016-06-05 22:10:27 unity.session.gnome GnomeSessionManager.cpp:399 UPower call failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method 'HibernateAllowed'
+WARN  2016-06-05 22:10:27 unity.glib.dbus.proxy GLibDBusProxy.cpp:487 Calling method "SuspendAllowed" on object path: "/org/freedesktop/UPower" failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method 'SuspendAllowed'
+ERROR 2016-06-05 22:10:27 unity.session.gnome GnomeSessionManager.cpp:399 UPower call failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such method 'SuspendAllowed'
+VMware: vmw_ioctl_fence_finish Failed
+WARN  2016-06-05 22:13:22 unity <unknown>:0 Failed to get active window: Timeout was reached
+WARN  2016-06-05 22:13:22 unity <unknown>:0 Failed to fetch paths: Timeout was reached
+WARN  2016-06-05 22:13:23 unity <unknown>:0 Failed to get active window: Timeout was reached
+1465192342418	addons.update-checker	WARN	Update manifest for ubufox@ubuntu.com did not contain an updates property
+1465192342674	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+1465192343427	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+1465192343465	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+1465192344873	addons.xpi	ERROR	Failed to clean updated system add-ons directories.: Unix error 2 during operation DirectoryIterator.prototype.next on file /home/chaitanyareddy/.mozilla/firefox/bitho8fg.default/features (No such file or directory) ((unknown module)) No traceback available
+
+(firefox:5586): Gtk-CRITICAL **: gtk_clipboard_set_with_data: assertion 'targets != NULL' failed
+ERROR 2016-06-05 23:31:59 unity.settings UnitySettings.cpp:293 Invalid monitor index: -1. Returning index 0 monitor instead.
+ERROR 2016-06-05 23:41:44 unity.settings UnitySettings.cpp:293 Invalid monitor index: -1. Returning index 0 monitor instead.
+ERROR 2016-06-06 00:07:26 unity.settings UnitySettings.cpp:293 Invalid monitor index: -1. Returning index 0 monitor instead.

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @bbtsystem.location %>
+</p>
+
+<p>
+  <strong>Name of bloodbank:</strong>
+  <%= @bbtsystem.name_of_BloodBank %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @bbtsystem.availability %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @bbtsystem.Email_id %>
+</p>
+
+<%= link_to 'Edit', edit_bbtsystem_path(@bbtsystem) %> |
+<%= link_to 'Back', bbtsystems_path %>

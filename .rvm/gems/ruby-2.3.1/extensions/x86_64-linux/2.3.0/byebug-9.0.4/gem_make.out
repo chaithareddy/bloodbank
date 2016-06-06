@@ -1,0 +1,19 @@
+current directory: /home/chaitanyareddy/.rvm/gems/ruby-2.3.1/gems/byebug-9.0.4/ext/byebug
+/home/chaitanyareddy/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20160525-54522-otgxrt.rb extconf.rb
+creating Makefile
+
+current directory: /home/chaitanyareddy/.rvm/gems/ruby-2.3.1/gems/byebug-9.0.4/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/chaitanyareddy/.rvm/gems/ruby-2.3.1/gems/byebug-9.0.4/ext/byebug
+make "DESTDIR="
+compiling threads.c
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/chaitanyareddy/.rvm/gems/ruby-2.3.1/gems/byebug-9.0.4/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20160525-54522-1gr9fxc/byebug

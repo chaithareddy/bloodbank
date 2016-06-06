@@ -1,0 +1,40 @@
+ 
+<%= link_to "logout", destroy_user_session_path, method: :delete %>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Btsses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Name of bb</th>
+      <th>Blood group</th>
+      <th>Address</th>
+      <th>Contact number</th>
+      <th>Mail</th>
+      <th>Working hours</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @btsses.each do |btss| %>
+      <tr>
+        <td><%= btss.location %></td>
+        <td><%= btss.name_of_BB %></td>
+        <td><%= btss.blood_group %></td>
+        <td><%= btss.address %></td>
+        <td><%= btss.contact_number %></td>
+        <td><%= btss.mail_id %></td>
+        <td><%= btss.working_hours %></td>
+        <td><%= link_to 'Show', btss %></td>
+        <td><%= link_to 'Edit', edit_btss_path(btss) %></td>
+        <td><%= link_to 'Destroy', btss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Btss', new_btss_path %>

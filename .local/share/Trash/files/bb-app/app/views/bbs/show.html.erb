@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>List:</strong>
+  <%= @bb.list %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bb.name %>
+</p>
+
+<%= link_to 'Edit', edit_bb_path(@bb) %> |
+<%= link_to 'Back', bbs_path %>

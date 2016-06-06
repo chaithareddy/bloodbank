@@ -1,0 +1,31 @@
+<%- model_class = Bss -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:Name_of_BB) %>:</strong></dt>
+  <dd><%= @bss.Name_of_BB %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:blood_typr) %>:</strong></dt>
+  <dd><%= @bss.blood_typr %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Quantity) %>:</strong></dt>
+  <dd><%= @bss.Quantity %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Address) %>:</strong></dt>
+  <dd><%= @bss.Address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Contact_number) %>:</strong></dt>
+  <dd><%= @bss.Contact_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email_id) %>:</strong></dt>
+  <dd><%= @bss.email_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Working_hours) %>:</strong></dt>
+  <dd><%= @bss.Working_hours %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              bsses_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_bss_path(@bss), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              bss_path(@bss),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

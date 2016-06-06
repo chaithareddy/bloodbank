@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bbtsystems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Name of bloodbank</th>
+      <th>Availability</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% if user_signed_in? %>
+<%=link_to "sign out",destroy_user_session_path,method: :delete%>
+<% else %>
+<%= link_to "sign In",new_user_session_path%>
+<% end %>
+    <% @bbtsystems.each do |bbtsystem| %>
+      <tr>
+        <td><%= bbtsystem.location %></td>
+        <td><%= bbtsystem.name_of_BloodBank %></td>
+        <td><%= bbtsystem.availability %></td>
+        <td><%= bbtsystem.Email_id %></td>
+        <td><%= link_to 'Show', bbtsystem %></td>
+        <td><%= link_to 'Edit', edit_bbtsystem_path(bbtsystem) %></td>
+        <td><%= link_to 'Destroy', bbtsystem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bbtsystem', new_bbtsystem_path %>

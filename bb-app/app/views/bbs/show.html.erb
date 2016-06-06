@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of bb:</strong>
+  <%= @bb.Name_of_BB %>
+</p>
+
+<p>
+  <strong>Blood type:</strong>
+  <%= @bb.Blood_type %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @bb.Quantity %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @bb.Address %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @bb.contact_Number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @bb.email_id %>
+</p>
+
+<p>
+  <strong>Working hour:</strong>
+  <%= @bb.working_hour %>
+</p>
+
+<%= link_to 'Edit', edit_bb_path(@bb) %> |
+<%= link_to 'Back', bbs_path %>

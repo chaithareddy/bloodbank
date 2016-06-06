@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if user_signed_in? %>
+<%= link_to "page", page_page_path %>
+<%= link_to "Home", page_Home_path %>
+<%= link_to "About", page_About_path %>
+<%= link_to "camps", page_Camps_path %>
+<%= link_to "Contact", page_Contact_path %>
+<% else %>
+<%= link_to "sign out", destroy_user_session_path, method: :delete %>
+<%= link_to "sign in", new_user_session_path %>
+<%= link_to "sign up", new_user_registration_path %>
+<% end %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @btss.location %>
+</p>
+
+<p>
+  <strong>Name of bb:</strong>
+  <%= @btss.name_of_BB %>
+</p>
+
+<p>
+  <strong>Blood group:</strong>
+  <%= @btss.blood_group %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @btss.address %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @btss.contact_number %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @btss.mail_id %>
+</p>
+
+<p>
+  <strong>Working hours:</strong>
+  <%= @btss.working_hours %>
+</p>
+
+<%= link_to 'Edit', edit_btss_path(@btss) %> |
+<%= link_to 'Back', btsses_path %>

@@ -1,0 +1,10 @@
+Student.create({name:"chaitha", roll_number:"12a", class:"it"})
+Student.create({name:"chaitha", roll_number:"abc", class:"it"})
+Student.create({name:"chaitha", roll_num:"04"})
+Student.create({name:"reddy", roll_num:"05"})
+Student.create({name:"sunanda", roll_num:"06"})
+rails g controller Student list_of_students
+rails g controller Student list_of_Students
+Teacher.create({name:"pinky", subject:"ruby"})
+Teacher.create({name:"rinky", subject:"rails"})
+exit

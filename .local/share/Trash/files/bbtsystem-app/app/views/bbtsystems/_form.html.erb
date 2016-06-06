@@ -1,0 +1,33 @@
+<%= form_for(@bbtsystem) do |f| %>
+  <% if @bbtsystem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bbtsystem.errors.count, "error") %> prohibited this bbtsystem from being saved:</h2>
+
+      <ul>
+      <% @bbtsystem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_BloodBank %><br>
+    <%= f.text_field :name_of_BloodBank %>
+  </div>
+  <div class="field">
+    <%= f.label :availability %><br>
+    <%= f.text_field :availability %>
+  </div>
+  <div class="field">
+    <%= f.label :Email_id %><br>
+    <%= f.text_field :Email_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

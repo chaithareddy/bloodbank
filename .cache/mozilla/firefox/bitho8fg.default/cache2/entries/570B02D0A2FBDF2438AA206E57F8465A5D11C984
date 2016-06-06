@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      RVM: Ruby Version Manager -
+      Installing RVM
+    </title>
+    <link href='/css/screen.css' media='screen' rel='stylesheet' type='text/css'>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta content='w2V78a6cwiHD5Gm8yvlTP21xZ1YgVguDdC0JGDEA2d0' name='google-site-verification'>
+    
+  </head>
+  <body>
+    <div id='heaven'></div>
+    <div id='container'>
+      <div id='logo'>
+        <a href='/'>
+          <img alt='RVM Logo' src='/images/logo.png'>
+        </a>
+      </div>
+      <div id='irc'>
+        <div class='title'>Online Help</div>
+        <div class='text'>
+          You can find the RVM team on IRC in
+          <br>
+          <a href='http://webchat.freenode.net/?channels=rvm'>
+            #rvm on irc.freenode.net
+          </a>
+          <div class='more'>If we do not respond right away, leave a message and a contact to you like email or twitter.</div>
+        </div>
+      </div>
+      <div id='donate'>
+        <div class='title'>Donation</div>
+        <div class='text'>
+          Love RVM? Help us maintain RVM, a donation can help with it.
+          <br>
+          <a href='https://www.bountysource.com/cart?amount=5&amp;currency=USD&amp;team_id=rvm' target='_blank'>
+            <img alt='Click here to donate $5' src='//img.shields.io/badge/donate-$5-brightgreen.svg'>
+          </a>
+          <a href='https://www.bountysource.com/cart?amount=20&amp;currency=USD&amp;team_id=rvm' target='_blank'>
+            <img alt='Click here to donate $20' src='//img.shields.io/badge/donate-$20-brightgreen.svg'>
+          </a>
+          <a href='https://www.bountysource.com/cart?amount=100&amp;currency=USD&amp;team_id=rvm' target='_blank'>
+            <img alt='Click here to donate $100' src='//img.shields.io/badge/donate-$100-brightgreen.svg'>
+          </a>
+          <div class='more'>
+            Want to help in other way, want to be a sponsor?
+            <br>
+            contact:
+            <a href='mailto:mpapis@gmail.com'>
+              Michal Papis
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id='sponsors'>
+        <div class='title'>Sponsors</div>
+        <div class='logo long'>
+          <a href='https://www.linode.com'>
+            <img alt='Linode' height='50' src='/images/linode_logo_gray.png'>
+          </a>
+        </div>
+        <div class='logo long'>
+          <a href='https://www.fastly.com/'>
+            <img alt='Fastly' height='50' src='/images/fastly_logo-01.png'>
+          </a>
+        </div>
+      </div>
+      <div id='carbon_ads_box'>
+        <div class='title'>Carbon Ads</div>
+        <script async='async' id='_carbonads_js' src='https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=rvmio' type='text/javascript'></script>
+      </div>
+      <div class='clear'></div>
+      <div id='content'>
+        <a id='top'></a>
+        <h1><a class="anchor" href="#installing-rvm" name="installing-rvm">&infin;</a>Installing RVM</h1>
+        
+        <h2><a class="anchor" href="#quick-guided-install" name="quick-guided-install">&infin;</a>Quick (guided) Install</h2>
+        
+        <p>Before any other step install <a href="/authors/mpapis/">mpapis</a> <a href="https://keybase.io/mpapis">public key</a> (might need <code>gpg2</code>) (see <a href="/rvm/security/">security</a>)</p>
+        
+        <pre class="code" title="triple click to select command">gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</pre>
+        
+        <p><strong>Unless doing guided install you should read all sub-sections under the <a href="/rvm/">RVM Section</a>.</strong></p>
+        
+        <p>Install RVM (development version):</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash</pre>
+        
+        <p>Install RVM stable with ruby:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --ruby</pre>
+        
+        <p>Additionally with rails (poor man's <a href="http://railsinstaller.org">railsinstaller</a>):</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --rails</pre>
+        
+        <p>Or with jruby, rails and puma:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --ruby=jruby --gems=rails,puma</pre>
+        
+        <p>To install without rubygems-bundler and rvm gems (and also remove those gems from both global.gems and default.gems):</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --without-gems="rvm rubygems-bundler"</pre>
+        
+        <p>To install with hirb gem (and also add it to global.gems):</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --with-gems="hirb"</pre>
+        
+        <p>To install with rails and haml gems (and also add them to default.gems):</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable --with-default-gems="rails haml"</pre>
+        
+        <p>Without <a href="/rvm/autolibs">autolibs</a>:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s -- --autolibs=read-fail</pre>
+        
+        <p>For a progress bar when downloading RVM / Rubies:</p>
+        
+        <pre class="code" title="triple click to select command">echo progress-bar &gt;&gt; ~/.curlrc</pre>
+        
+        <p>Point to be noted is, there is a backslash before <b>curl</b>.
+        This prevents misbehaving if you have aliased it with configuration
+        in your <code>~/.curlrc</code> file.</p>
+        
+        <p>If you're an existing RVM user and you don't want RVM to attempt to setup
+        your shell to load RVM, you can opt out of this at install time by exporting
+        rvm_ignore_dotfiles=yes, or opt out permanently by setting this in your rvmrc.</p>
+        
+        <h3><a class="anchor" href="#you-can-also" name="you-can-also">&infin;</a>You can also:</h3>
+        
+        <ul>
+        <li>read the <a href="#explained">installation documentation</a> below.</li>
+        <li>for Windows use this <a href="http://blog.developwithpassion.com/2012/03/30/installing-rvm-with-cygwin-on-windows/">tutorial</a>.</li>
+        <li>watch the most accurate (but not official) <a href="https://www.youtube.com/watch?v=cQVb7fHFjSM">rvm screencast</a>.</li>
+        <li>read the most accurate (but not official) <a href="http://cheat.errtheblog.com/s/rvm">rvm cheat sheet</a>.</li>
+        <li>starting with Rails? watch the <a href="http://railscasts.com/episodes/310-getting-started-with-rails">RailsCasts.com on Getting Started with Rails</a>.</li>
+        </ul>
+        
+        
+        <hr />
+        
+        <p><a name="explained"></a></p>
+        
+        <h2><a class="anchor" href="#installation-explained" name="installation-explained">&infin;</a>Installation explained</h2>
+        
+        <p>There are three different ways to install and configure RVM.</p>
+        
+        <ol>
+        <li><strong>Single-User installations</strong> (<span style="color: blue;">recommended</span>) -
+        For an isolated install within a user's $HOME, not for root.</li>
+        <li><strong>Multi-User installations</strong> -
+        For <span style="color: red;">server administrators</span> -
+        For an installation usable by all users on the system -
+        Please note that Single-User supersedes Multi-User.
+        This also used to be called the System-Wide Install.
+        <strong style="color: red;">Using this type of installation without
+        knowledge how umask works is a big security risk.</strong></li>
+        <li><strong>Mixed mode installations</strong> -
+        For an installation usable by all users on the system -
+        with isolated rubies/gemsets within a user's $HOME.
+        Installation instructions are exactly the same as for
+        Multi-User installations, the difference is in users environment.</li>
+        </ol>
+        
+        
+        <p><a href="https://get.rvm.io">get.rvm.io</a> is a redirect to
+        <a href="https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer">https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer</a>
+        You could also use full path for the installer:</p>
+        
+        <pre class="code" title="triple click to select command">\curl https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable</pre>
+        
+        <h2><a class="anchor" href="#installation" name="installation">&infin;</a>Installation</h2>
+        
+        <p>I recommend you
+        <a href="https://github.com/rvm/rvm/blob/master/binscripts/rvm-installer">read the installation script</a>
+        yourself. This will give you a chance to understand what it is doing <em>before</em>
+        installing, and allow you to feel more comfortable running it if you do so.</p>
+        
+        <h3><a class="anchor" href="#1-download-and-run-the-rvm-installation-script" name="1-download-and-run-the-rvm-installation-script">&infin;</a>1. Download and run the RVM installation script</h3>
+        
+        <p>Installing the stable release version:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s stable</pre>
+        
+        <p>To get the latest development state:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash</pre>
+        
+        <p>Instruct RVM to not change the shell initializations files '<em>rc' / '</em>profile':</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles</pre>
+        
+        <p>Please note that from this point it is user responsibility to add sourcing rvm to appropriate files.</p>
+        
+        <p>For a Multi-User install you would execute the following:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | sudo bash -s stable</pre>
+        
+        <p><strong>Note: The Multi-User install instructions <em>must</em> be prefixed with the
+        <a href="/support/troubleshooting/#sudo"><code>sudo</code> command</a>.
+        However, once the install is complete, and the instructions to add users to the
+        <code>rvm</code> group is followed, the use of either <code>sudo</code> or <code>rvmsudo</code> is no longer required. The <code>sudo</code> command
+        is only to temporarily elevate privileges so the installer can complete its work. If you need to
+        use <code>sudo</code> or <code>rvmsudo</code> after the install is complete, some part of the install directions were not
+        properly followed. This usually is because people execute the install <em>as</em> <code>root</code>, rather than
+        executing the installation instructions from a non-privileged user account.</strong></p>
+        
+        <p>Installing a specific version:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s -- --version latest&#x000A;\curl -sSL https://get.rvm.io | bash -s -- --branch [owner/][repo]</pre>
+        
+        <p>Prefix the 'bash' portion with 'sudo', of course, if you wish to apply
+        this to a Multi_user Install. Please feel free to check out our
+        <a href="/rvm/upgrading/">upgrading docs</a> for more details on branch format.</p>
+        
+        <p>Debugging installation process:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s -- --trace</pre>
+        
+        <p><strong>If the rvm install script complains about certificates</strong>
+        you need to follow the displayed instructions.</p>
+        
+        <h4>Single-User Install Location: ~/.rvm/</h4>
+        
+        <p>If the install script is run as a standard, non-root user, RVM will install into the current users's home directory.</p>
+        
+        <p>Modification of user configuration files (<code>*rc</code> / <code>*profile</code>) - RVM by default will modify
+        user startup files, although it is not recommended you can disable automated process
+        and do this manually:</p>
+        
+        <pre class="code" title="triple click to select command">\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles&#x000A;echo "source $HOME/.rvm/scripts/rvm" &gt;&gt; ~/.bash_profile</pre>
+        
+        <h4>Multi-User Install Location: /usr/local/rvm</h4>
+        
+        <p>If the install script is run prefixed with sudo, RVM will automatically
+        install into <code>/usr/local/rvm</code>. Please see the troubleshooting page for an
+        <a href="/support/troubleshooting/#sudo">important note regarding Multi-User Installs</a>.</p>
+        
+        <p>Please see the FAQ page for an
+        <a href="/support/faq/#root">important note regarding</a> <strong>root only installs</strong>.</p>
+        
+        <h4>External tutorials</h4>
+        
+        <p>Note that that any outside tutorials are <strong>NOT</strong> supported whether they work or not.
+        Tutorials are great, however we have spent massive amounts of man hours debugging the installation process.
+        Please use the install process(es) from this site only, as this is the only supported installation types and methods.</p>
+        
+        <h4>To update an existing RVM installation</h4>
+        
+        <p>It is safe to simply re-run the installation script again, or you can
+        follow the <a href="/rvm/upgrading/">upgrading docs</a>.</p>
+        
+        <h3><a class="anchor" href="#2-load-rvm-into-your-shell-sessions-as-a-function" name="2-load-rvm-into-your-shell-sessions-as-a-function">&infin;</a>2. Load RVM into your shell sessions as a function</h3>
+        
+        <h4>Single-User:</h4>
+        
+        <p>The rvm function will be automatically configured for every user on the system if you install as single user.
+        Read the output of installer to check which files were modified.</p>
+        
+        <h4>Multi-User:</h4>
+        
+        <p>The rvm function will be automatically configured for every user on the system if you install with sudo.
+        This is accomplished by loading <code>/etc/profile.d/rvm.sh</code> on login.
+        Most Linux distributions default to parsing /etc/profile which contains
+        the logic to load all files residing in the <code>/etc/profile.d/</code> directory.
+        Once you have added the users you want to be able to use RVM to the rvm group, those users MUST log out and back in
+        to gain rvm group membership because group memberships are only evaluated by the operating system at initial login time.
+        <strong>Zsh not always sources <code>/etc/profile</code> so you might need to add this in <code>/etc/**/zprofile</code></strong>:</p>
+        
+        <pre class="code" title="triple click to select command">source /etc/profile</pre>
+        
+        <p><a name="mixed"></a></p>
+        
+        <h4>Mixed mode (user gemsets):</h4>
+        
+        <ul>
+        <li>After following above instructions for Multi-User.</li>
+        <li>Select a user as a manager - he will be responsible for installing new
+        rubies. This user should never run the command introduced below. If
+        this happens, remove/rename the <code>${HOME}/.rvmrc</code>, logout and then relogin.
+        Otherwise you won't be able to install/upgrade new rubies correctly.</li>
+        <li><p>For each user that want to use RVM, an additional command needs to be run (once) for each user:</p>
+        
+        <pre class="code" title="triple click to select command">  rvm user gemsets</pre></li>
+        </ul>
+        
+        
+        <p>Gemsets created by these users will be hosted in their HOME directory.
+        It's not possible to use global gemsets from system without using tricks
+        like manually linking directories and they should not be used in mixed-mode.
+        Please bear in mind that 'system' in this context does not refer to your
+        distribution's ruby packages, but to the RVM Multi-User installation.</p>
+        
+        <p>You have two possibilities to manage RVM. The first one is to add
+        managers to the rvm group. The second one is to use separate managers
+        with rvmsudo and privilege escalation. Note that it is not safe to use
+        <code>rvmsudo</code> from mixed mode user. Both can be mixed without any
+        side-effect. It is however very important to not enable mixed-mode
+        gemsets or rubies for the managers. RVM is using a custom <code>umask</code>
+        (<code>umask u=rwx,g=rwx,o=rx</code>) when installing gemsets, rubies, updating
+        itself, etc. This should not impact your system. But if you prefer to
+        avoid RVM messing around with your umask, you can comment the umask line
+        in <code>/etc/rvmrc</code>.</p>
+        
+        <p>This mode should also works with passenger, please follow
+        <a href="/integration/passenger/">passenger</a> instructions.
+          .</p>
+        
+        <h3><a class="anchor" href="#3-reload-shell-configuration-amp-test" name="3-reload-shell-configuration-amp-test">&infin;</a>3. Reload shell configuration &amp; test</h3>
+        
+        <p>Close out your current shell or terminal session and open a new one
+        (preferred). You may load RVM with the following command:</p>
+        
+        <pre class="code" title="triple click to select command">source ~/.rvm/scripts/rvm</pre>
+        
+        <p>If installation and configuration were successful, RVM should now load
+        whenever you open a new shell. This can be tested by executing the
+        following command which should output <code>rvm is a function</code> as
+        shown below.</p>
+        
+        <pre class="code" title="triple click to select command">type rvm | head -n 1&#x000A;rvm is a function</pre>
+        
+        <p><strong>NOTE</strong>: Before reporting problems check <code>rvm notes</code> as it might
+        contain important information.</p>
+        
+        <h4>Congratulations! You have successfully installed RVM.</h4>
+        
+        <h2><a class="anchor" href="#try-out-your-new-rvm-installation" name="try-out-your-new-rvm-installation">&infin;</a>Try out your new RVM installation</h2>
+        
+        <p>Below are some examples of how to install and use a Ruby under RVM.</p>
+        
+        <p>Display a list of all <code>known</code> rubies. NOTE: RVM can install many more
+        Rubies not listed.</p>
+        
+        <pre class="code" title="triple click to select command">rvm list known&#x000A;# MRI Rubies&#x000A;[ruby-]1.8.6[-p420]&#x000A;[ruby-]1.8.7[-p374]&#x000A;[ruby-]1.9.1[-p431]&#x000A;[ruby-]1.9.2[-p320]&#x000A;[ruby-]1.9.3[-p545]&#x000A;[ruby-]2.0.0-p353&#x000A;[ruby-]2.0.0[-p451]&#x000A;[ruby-]2.1[.1]&#x000A;[ruby-]2.1-head&#x000A;ruby-head&#x000A;...</pre>
+        
+        <p>Install a version of Ruby (eg <code>2.1.1</code>):</p>
+        
+        <pre class="code" title="triple click to select command">rvm install 2.1&#x000A;Checking requirements for opensuse.&#x000A;Requirements installation successful.&#x000A;Installing Ruby from source to: /home/mpapis/.rvm/rubies/ruby-2.1.1, this may take a while depending on your cpu(s)...&#x000A;...&#x000A;Install of ruby-2.1.1 - #complete&#x000A;Using /home/mpapis/.rvm/gems/ruby-2.1.1</pre>
+        
+        <p>Use the newly installed Ruby:</p>
+        
+        <pre class="code" title="triple click to select command">rvm use 2.1&#x000A;Using /home/mpapis/.rvm/gems/ruby-2.1.1</pre>
+        
+        <p>Check this worked correctly:</p>
+        
+        <pre class="code" title="triple click to select command">ruby -v&#x000A;ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-linux]&#x000A;&#x000A;which ruby&#x000A;/home/mpapis/.rvm/rubies/ruby-2.1.1/bin/ruby</pre>
+        
+        <p>Optionally, you can set a version of Ruby to use as the default for new shells. Note that this overrides the 'system' ruby:</p>
+        
+        <pre class="code" title="triple click to select command">rvm use 2.1 --default</pre>
+        
+        <h2><a class="anchor" href="#enjoy-using-rvm" name="enjoy-using-rvm">&infin;</a>Enjoy using RVM!</h2>
+        
+        <h3><a class="anchor" href="#where-to-now" name="where-to-now">&infin;</a>Where to now?</h3>
+        
+        <p>If you are new to RVM I recommend that you read the
+        <a href="/rvm/basics/">basics page</a>. At the end of the basics page there are
+        further links for getting started.</p>
+        
+        <h2><a class="anchor" href="#troubleshooting-your-install" name="troubleshooting-your-install">&infin;</a>Troubleshooting Your Install</h2>
+        
+        <ul>
+        <li><p>If you open a new shell and running:</p>
+        
+        <pre class="code" title="triple click to select command">  type rvm | head -1</pre>
+        
+        <p>  does <strong>not</strong> show <code>rvm is a function</code>, RVM isn't being sourced correctly.</p></li>
+        <li><p>Ensure that RVM is sourced after any path settings as RVM and manipulates the path.
+        If you don't do this, RVM may not work as expected.</p></li>
+        <li><p>If you are using GNOME on Red Hat, CentOS or Fedora, ensure that the
+        <strong>Run command as login shell</strong> option is checked under the
+        <strong>Title and Command</strong> tab in <strong>Profile Preferences</strong>.
+        After changing this setting, you may need to exit your console session
+        and start a new one before the changes take affect.</p></li>
+        </ul>
+        <a id='bottom'></a>
+      </div>
+      <div id='docindex'>
+        <div class='headline'>
+          <a style="color: red;" href="/">RVM Documentation Index</a>
+          |
+          <a href="/blog/">RVM Blog</a>
+        </div>
+        <div class='column'>
+          <a href="/rvm/">RVM</a>
+          <ul><li><a href="/rvm/about/">About</a></li>
+          <li><a href="/rvm/autolibs/">Autolibs</a></li>
+          <li><a href="/rvm/basics/">Basics</a></li>
+          <li><a href="/rvm/best-practices/">Best Practices</a></li>
+          <li><a href="/rvm/cli/">Cli</a></li>
+          <li><a href="/rvm/configuration/">Configuration</a></li>
+          <li><a href="/rvm/info/">Info</a></li>
+          <li><a href="/rvm/install/">Install</a></li>
+          <li><a href="/rvm/myths/">Myths</a></li>
+          <li><a href="/rvm/offline/">Offline</a></li>
+          <li><a href="/rvm/prerequisites/">Prerequisites</a></li>
+          <li><a href="/rvm/security/">Security</a></li>
+          <li><a href="/rvm/upgrading/">Upgrading</a></li></ul>
+          <a href='/interpreters/'>Interpreters</a>
+          <ul>
+            <li>
+              <a href='/interpreters/ruby/'>MRI/YARV (ruby)</a>
+            </li>
+            <li>
+              <a href='/interpreters/jruby/'>JRuby (jruby)</a>
+            </li>
+            <li>
+              <a href='/interpreters/rbx/'>Rubinius (rbx)</a>
+            </li>
+          </ul>
+          <a href="/rubies/">Rubies</a>
+          <ul><li><a href="/rubies/alias/">Alias</a></li>
+          <li><a href="/rubies/default/">Default</a></li>
+          <li><a href="/rubies/docs/">Docs</a></li>
+          <li><a href="/rubies/info/">Info</a></li>
+          <li><a href="/rubies/installing/">Installing</a></li>
+          <li><a href="/rubies/list/">List</a></li>
+          <li><a href="/rubies/named/">Named</a></li>
+          <li><a href="/rubies/patching/">Patching</a></li>
+          <li><a href="/rubies/removing/">Removing</a></li>
+          <li><a href="/rubies/rubygems/">Rubygems</a></li>
+          <li><a href="/rubies/strings/">Strings</a></li>
+          <li><a href="/rubies/uninstalling/">Uninstalling</a></li>
+          <li><a href="/rubies/upgrading/">Upgrading</a></li></ul>
+        </div>
+        <div class='column'>
+          <a href="/gemsets/">Gemsets</a>
+          <ul><li><a href="/gemsets/basics/">Basics</a></li>
+          <li><a href="/gemsets/clear/">Clear</a></li>
+          <li><a href="/gemsets/copying/">Copying</a></li>
+          <li><a href="/gemsets/creating/">Creating</a></li>
+          <li><a href="/gemsets/deleting/">Deleting</a></li>
+          <li><a href="/gemsets/emptying/">Emptying</a></li>
+          <li><a href="/gemsets/exporting/">Exporting</a></li>
+          <li><a href="/gemsets/global/">Global</a></li>
+          <li><a href="/gemsets/ignoring/">Ignoring</a></li>
+          <li><a href="/gemsets/importing/">Importing</a></li>
+          <li><a href="/gemsets/initial/">Initial</a></li>
+          <li><a href="/gemsets/listing/">Listing</a></li>
+          <li><a href="/gemsets/using/">Using</a></li></ul>
+          <a href='/set/'>Set Actions</a>
+          <ul>
+            <li>
+              <a href='/set/do/'>do</a>
+            </li>
+            <li>
+              <a href='/set/tests/'>tests</a>
+            </li>
+            <li>
+              <a href='/set/benchmark/'>benchmark</a>
+            </li>
+          </ul>
+          <a href="/workflow/">Workflow</a>
+          <ul><li><a href="/workflow/chruby/">Chruby</a></li>
+          <li><a href="/workflow/completion/">Completion</a></li>
+          <li><a href="/workflow/examples/">Examples</a></li>
+          <li><a href="/workflow/hooks/">Hooks</a></li>
+          <li><a href="/workflow/irbrc/">Irbrc</a></li>
+          <li><a href="/workflow/projects/">Projects</a></li>
+          <li><a href="/workflow/prompt/">Prompt</a></li>
+          <li><a href="/workflow/proxy/">Proxy</a></li>
+          <li><a href="/workflow/rvmrc/">Rvmrc</a></li>
+          <li><a href="/workflow/screen/">Screen</a></li>
+          <li><a href="/workflow/scripting/">Scripting</a></li>
+          <li><a href="/workflow/subshells/">Subshells</a></li></ul>
+        </div>
+        <div class='column'>
+          <a href='/integration/'>Integration</a>
+          <ul>
+            <li>
+              <a href='/integration/databases/'>Databases</a>
+            </li>
+            <li>
+              <a href='/integration/zsh/'>Zsh</a>
+            </li>
+            <li>
+              <a href='/integration/fish/'>Fish</a>
+            </li>
+            <li>
+              <a href='/integration/bundler/'>Bundler</a>
+            </li>
+            <li>
+              <a href='/integration/memprof/'>MemProf</a>
+            </li>
+            <li>
+              <a href='/integration/pow/'>Pow</a>
+            </li>
+            <li>
+              <a href='/integration/textmate/'>Textmate</a>
+            </li>
+            <li>
+              <a href='/integration/emacs/'>Emacs</a>
+            </li>
+            <li>
+              <a href='/integration/netbeans/'>Netbeans</a>
+            </li>
+            <li>
+              <a href='/integration/culerity/'>Culerity</a>
+            </li>
+            <li>
+              <a href='/integration/sketchup/'>SketchUp</a>
+            </li>
+            <li>
+              <a href='/integration/jenkins/'>Jenkins</a>
+            </li>
+            <li>
+              <a href='/integration/macports/'>MacPorts</a>
+            </li>
+            <li>
+              <a href='/integration/qtruby/'>QT Ruby</a>
+            </li>
+            <li>
+              <a href='/integration/sudo/'>Sudo</a>
+            </li>
+            <li>
+              <a href='/integration/tk/'>Tk</a>
+            </li>
+            <li>
+              <a href='/integration/vagrant/'>Vagrant</a>
+            </li>
+            <li>
+              <a href='/integration/vim/'>Vim</a>
+            </li>
+            <li>
+              <a href='/integration/gnome-terminal/'>Gnome-terminal</a>
+            </li>
+            <li>
+              <a href='/integration/lxterminal/'>LXTerminal</a>
+            </li>
+            <li>
+              <a href='/integration/xterm/'>XTerm</a>
+            </li>
+            <li>
+              <a href='/integration/konsole/'>Konsole</a>
+            </li>
+          </ul>
+          <a href="/deployment/">Deployment</a>
+          <ul><li><a href="/deployment/best-practices/">Best Practices</a></li>
+          <li><a href="/deployment/capistrano/">Capistrano</a></li>
+          <li><a href="/deployment/chef/">Chef</a></li>
+          <li><a href="/deployment/cron/">Cron</a></li>
+          <li><a href="/deployment/god/">God</a></li>
+          <li><a href="/deployment/init-d/">Init D</a></li>
+          <li><a href="/deployment/passenger/">Passenger</a></li></ul>
+        </div>
+        <div class='column'>
+          <a href='/os/'>Operating Systems</a>
+          <a href='/packages/'>Packages</a>
+          <a href='/presentations/'>Presentations</a>
+          <ul>
+            <li>
+              <a href='http://www.confreaks.com/videos/3-mwrc2010-managing-ruby-projects-with-rvm'>MWRC 2010</a>
+            </li>
+            <li>
+              <a href='http://confreaks.tv/videos/railsconf2012-rvm-essential-rails-development-tools'>RailsConf 2012</a>
+            </li>
+            <li>
+              <a href='http://confreaks.tv/videos/railsconf2013-developing-rails-apps-in-technical-isolation'>RailsConf 2013</a>
+            </li>
+            <li>
+              <a href='http://thechangelog.com/66/'>Changelog 66 with Wayne</a>
+            </li>
+            <li>
+              <a href='http://www.youtube.com/watch?v=wN-iIC3S1ZM'>RVM 2: Lessons and future</a>
+            </li>
+            <li>
+              <a href='http://www.youtube.com/watch?v=gYNht8H24ZQ'>RVM 2: Python Version Manager</a>
+            </li>
+            <li>
+              <a href='http://thechangelog.com/102/'>Changelog 102 with Michal</a>
+            </li>
+          </ul>
+          <a href='/support/'>Help &amp; Support</a>
+          <ul>
+            <li>
+              <a href='/support/faq/'>FAQ &amp; Notes</a>
+            </li>
+            <li>
+              <a href='/support/troubleshooting/'>Troubleshooting</a>
+            </li>
+            <li>
+              <a href='/support/fixing-broken-ssl-certificates/'>Fixing Broken SSL Certificates</a>
+            </li>
+            <li>
+              <a href='/support/irc/'>IRC</a>
+            </li>
+          </ul>
+          <a href="/qa/">Quality Assurance</a>
+          <ul><li><a href="/qa/software_testing/">Software_testing</a></li></ul>
+          <a href="/development/">Development</a>
+          <ul><li><a href="/development/contributing/">Contributing</a></li>
+          <li><a href="/development/debugging/">Debugging</a></li>
+          <li><a href="/development/github/">Github</a></li>
+          <li><a href="/development/list/">List</a></li></ul>
+          <a href='/credits/'>Credits</a>
+          <ul>
+            <li>
+              <a href='/credits/thanks/'>Contributions</a>
+            </li>
+            <li>
+              <a href='/credits/donations/'>Donations</a>
+            </li>
+            <li>
+              <a href='/credits/funding/'>Funding</a>
+            </li>
+          </ul>
+        </div>
+        <div class='clear'></div>
+      </div>
+    </div>
+    <div id='footer'>
+      <div id='footer-container'>
+        &infin;
+        Copyright
+        &copy; 2009-2011
+        <a href='https://github.com/wayneeseguin'>Wayne E. Seguin</a>
+        &copy; 2011-2016
+        <a href='https://github.com/mpapis'>Michal Papis</a>
+        &infin;
+        Built with
+        <a href='http://nanoc.ws'>Nanoc</a>
+        &infin;
+        Hosted by
+        <a href='https://www.linode.com'>Linode, LLC</a>
+        &infin;
+        Cached by
+        <a href='https://www.fastly.com/'>Fastly</a>
+        &infin;
+        Tested by
+        <a href='http://www.travis-ci.org/'>Travis CI</a>
+      </div>
+      <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+      <script>
+        google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+        google.setOnLoadCallback(function() {
+          var customSearchControl = new google.search.CustomSearchControl('012125088244772422662:eplzzxbbjte');
+          customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+          customSearchControl.draw('cse');
+        }, true);
+      </script>
+      <script src="https://www.google.com/jsapi?key=ABQIAAAAlfGITCLCzrcO4cy2viT78RSZcRLSY2B0NYnmYEy-3gaXzTHyQxRduJj7nQ6rEtYNpUjIQpEEosF5XA" type="text/javascript"></script>&#x000A;<script src="/javascripts/site.js" type="text/javascript"></script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-24992786-1', 'rvm.io'); // owner unknown :(
+        ga('send', 'pageview');
+        ga('create', 'UA-45354940-1', 'rvm.io', {'name': 'ga_mpapis'}); // owner mpapis@gmail.com
+        ga('ga_mpapis.send', 'pageview');
+      </script>
+    </div>
+  </body>
+</html>
+íJÚÑù      WCù3WEh‡<|ã½WK.¼       :https://rvm.io/rvm/install necko:classified 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8F+O2DZM7ZTG6GukivU8OT5gAAAAAAAAv4MIIL9DCCCtygAwIBAgIQBFwN3IgYWTw+Uc0gaWIlBzANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNzdXJhbmNlIFNlcnZlciBDQTAeFw0xNDEyMDgwMDAwMDBaFw0xODAyMDYxMjAwMDBaMGwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRUwEwYDVQQKEwxGYXN0bHksIEluYy4xGTAXBgNVBAMTEGEuc3NsLmZhc3RseS5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUJUiQsaVP/vC4Mb3aJUmA9KnMQa7EJfjYLsE4F0VehrOp8jlSSXmQLELlUAwPp2F2PNyB32DDOFBHZIYwFrApFEzsJdTKQUYk6xHPZOdYoIijpmfb5xRMdTjqxThGkk+khU0+ipPWiErJNRkapLgPwPD4ctd5X8rnKF8lMHIxx5Xhdg6PqZC3F7y45Nym2a3M8xIKIkB77o1bkuDpGnV9ZESC/Yf9Mc4NmWrQjqQc+8yIabir+n7/YcM5UdUjZPNShgL4jLYVJ+KDRZcjIT/dXRZoPpJgRFL9NIep/eSAzQa3g659uW7tjN6tg5iQm4hwksaWp+zfTAJc4IXNtlndAgMBAAGjggiMMIIIiDAfBgNVHSMEGDAWgBRRaP+QrwIHdTzM2WVkYqISuFlyOzAdBgNVHQ4EFgQUwIj0Y03ka1Q28RLCtKWy4nN7FIgwgga8BgNVHREEggazMIIGr4IQYS5zc2wuZmFzdGx5Lm5ldIISKi5hLnNzbC5mYXN0bHkubmV0gg9mYXN0Lndpc3RpYS5jb22CEHB1cmdlLmZhc3RseS5uZXSCEm1pcnJvcnMuZmFzdGx5Lm5ldIIOKi5wYXJzZWNkbi5jb22CDSouZmFzdHNzbC5uZXSCCXZveGVyLmNvbYINd3d3LnZveGVyLmNvbYIOKi5maXJlYmFzZS5jb22CEHNpdGVzLnlhbW1lci5jb22CGHNpdGVzLnN0YWdpbmcueWFtbWVyLmNvbYIPKi5za2ltbGlua3MuY29tghMqLnNraW1yZXNvdXJjZXMuY29tghBjZG4udGhpbmdsaW5rLm1lggwqLmZpdGJpdC5jb22CEiouaG9zdHMuZmFzdGx5Lm5ldIISY29udHJvbC5mYXN0bHkubmV0gg8qLndpa2lhLWluYy5jb22CFSoucGVyZmVjdGF1ZGllbmNlLmNvbYILKi53aWtpYS5jb22CEmYuY2xvdWQuZ2l0aHViLmNvbYIVKi5kaWdpdGFsc2Npcm9jY28ubmV0ggoqLmV0c3kuY29tghAqLmV0c3lzdGF0aWMuY29tgg0qLmFkZHRoaXMuY29tghAqLmFkZHRoaXNjZG4uY29tgg9mYXN0Lndpc3RpYS5uZXSCDnJhdy5naXRodWIuY29tgg93d3cudXNlcmZveC5jb22CEyouYXNzZXRzLXlhbW1lci5jb22CGyouc3RhZ2luZy5hc3NldHMteWFtbWVyLmNvbYIWYXNzZXRzLmh1Z2dpZXMtY2RuLm5ldIISb3JiaXQuc2hhemFtaWQuY29tgg9hYm91dC5qc3Rvci5vcmeCFyouZ2xvYmFsLnNzbC5mYXN0bHkubmV0gg13ZWIudm94ZXIuY29tgg9weXBpLnB5dGhvbi5vcmeCCyouMTJ3YnQuY29tghJ3d3cuaG9sZGVyZGVvcmQubm+CGnNlY3VyZWQuaW5kbi5pbmZvbGlua3MuY29tghBwbGF5LnZpZHlhcmQuY29tghhwbGF5LXN0YWdpbmcudmlkeWFyZC5jb22CFXNlY3VyZS5pbWcud2ZyY2RuLmNvbYIWc2VjdXJlLmltZy5qb3NzY2RuLmNvbYIQKi5nb2NhcmRsZXNzLmNvbYIVd2lkZ2V0cy5waW50ZXJlc3QuY29tgg4qLjdkaWdpdGFsLmNvbYINKi43c3RhdGljLmNvbYIPcC5kYXRhZG9naHEuY29tghBuZXcubXVsYmVycnkuY29tghJ3d3cuc2FmYXJpZmxvdy5jb22CEmNkbi5jb250ZW50ZnVsLmNvbYIQdG9vbHMuZmFzdGx5Lm5ldIISKi5odWV2b3NidWVub3MuY29tgg4qLmdvb2RlZ2dzLmNvbYIWKi5mYXN0bHkucGljbW9ua2V5LmNvbYIVKi5jZG4ud2hpcHBsZWhpbGwubmV0ghEqLndoaXBwbGVoaWxsLm5ldIIbY2RuLm1lZGlhMzQud2hpcHBsZWhpbGwubmV0ghtjZG4ubWVkaWE1Ni53aGlwcGxlaGlsbC5uZXSCG2Nkbi5tZWRpYTc4LndoaXBwbGVoaWxsLm5ldIIcY2RuLm1lZGlhOTEwLndoaXBwbGVoaWxsLm5ldIIOKi5tb2RjbG90aC5jb22CDyouZGlzcXVzY2RuLmNvbYILKi5qc3Rvci5vcmeCDyouZHJlYW1ob3N0LmNvbYIOd3d3LmZsaW50by5jb22CDyouY2hhcnRiZWF0LmNvbYINKi5oaXBtdW5rLmNvbYIaY29udGVudC5iZWF2ZXJicm9va3MuY28udWuCG3NlY3VyZS5jb21tb24uY3Nuc3RvcmVzLmNvbYIJKi52c2NvLmNvgg53d3cuam9pbm9zLmNvbYIlc3RhZ2luZy1tb2JpbGUtY29sbGVjdG9yLm5ld3JlbGljLmNvbYIOKi5tb2RjbG90aC5uZXSCECouZm91cnNxdWFyZS5jb22CDCouc2hhemFtLmNvbYIKKi40c3FpLm5ldIIOKi5tZXRhY3Bhbi5vcmeCDCouZmFzdGx5LmNvbYIJd2lraWEuY29tggpmYXN0bHkuY29tghEqLmdhZHZlbnR1cmVzLmNvbYIWd3d3LmdhZHZlbnR1cmVzLmNvbS5hdYIVd3d3LmdhZHZlbnR1cmVzLmNvLnVrgglrcmVkby5jb22CFmNkbi10YWdzLmJyYWluaWVudC5jb22CFG15LmJpbGxzcHJpbmdhcHAuY29tggZydm0uaW8wDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB1BgNVHR8EbjBsMDSgMqAwhi5odHRwOi8vY3JsMy5kaWdpY2VydC5jb20vc2hhMi1oYS1zZXJ2ZXItZzUuY3JsMDSgMqAwhi5odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vc2hhMi1oYS1zZXJ2ZXItZzUuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMIGDBggrBgEFBQcBAQR3MHUwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBNBggrBgEFBQcwAoZBaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkhpZ2hBc3N1cmFuY2VTZXJ2ZXJDQS5jcnQwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOCAQEAe4N8l21/7NVZj/FP/B3CtE/a7LqAQHkrJbCpY5/x+mSe+4OKZbcg3k2JntXNg9XqokXMXJhecVB9aCDz4IeJk7xg/GKK9CXzHiekKVPBmBBpLhTvSHMlbDegpTm5JBPcqP+D0av6a5mYyGfV+UCAcZPjl4CW4hCbRqgdDFiBDt8msOl+sHx2aWTq49MbwOuzcagY7Z8G96EoJxpRmaAIeqYbnZORe/pC1j5ZGw62uVYoUF+ArRPE0GwwyfeanJd/Rnzj/QabNzuKBnkSq76PuszigCL4RQghRoe5Mb07PXPUBF53nN0Tx3vswZd0TO2HlKAFV6Zz/CYlLiY6d22CfcAvAAMAAAAAAQEAAA== request-method GET response-head HTTP/1.1 200 OK
+Server: nginx/1.6.2
+Content-Type: text/html
+Last-Modified: Wed, 30 Mar 2016 14:31:20 GMT
+Etag: "56fbe338-82ac"
+Strict-Transport-Security: max-age=63072000; includeSubDomains
+X-Frame-Options: DENY
+x-content-type-options: nosniff
+Content-Length: 33452
+Accept-Ranges: bytes
+Date: Tue, 24 May 2016 10:43:58 GMT
+Via: 1.1 varnish
+Age: 1378
+X-Served-By: cache-sin6925-SIN
+X-Cache: HIT
+X-Cache-Hits: 2
+X-Timer: S1464086638.536373,VS0,VE0
+ charset windows-1252 uncompressed-len 0 predictor::resource-count 31 predictor::https://rvm.io/css/screen.css 1,1,1464072499,0 predictor::https://rvm.io/images/logo.png 1,1,1464072499,0 predictor::https://img.shields.io/badge/donate-$5-brightgreen.svg 1,1,1464072499,0 predictor::https://img.shields.io/badge/donate-$20-brightgreen.svg 1,1,1464072499,0 predictor::https://img.shields.io/badge/donate-$100-brightgreen.svg 1,1,1464072499,0 predictor::https://rvm.io/images/linode_logo_gray.png 1,1,1464072499,0 predictor::https://rvm.io/images/fastly_logo-01.png 1,1,1464072499,0 predictor::https://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=rvmio 1,1,1464072499,0 predictor::https://www.google.com/jsapi 1,1,1464072499,0 predictor::https://www.google.com/jsapi?key=ABQIAAAAlfGITCLCzrcO4cy2viT78RSZcRLSY2B0NYnmYEy-3gaXzTHyQxRduJj7nQ6rEtYNpUjIQpEEosF5XA 1,1,1464072499,0 predictor::https://rvm.io/javascripts/site.js 1,1,1464072499,0 predictor::https://rvm.io/images/bottom-gradient.gif 1,1,1464072499,0 predictor::https://rvm.io/images/bgtex.jpg 1,1,1464072499,0 predictor::https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff 1,1,1464072499,0 predictor::https://www.google.com/uds/?file=search&v=1&hl=en&style=%2F%2Fwww.google.com%2Fcse%2Fstyle%2Flook%2Fshiny.css 1,1,1464072499,0 predictor::https://www.google.com/uds/api/search/1.0/b16e3ffbc96e4526fdc0cc8394bf713a/default+en.css 1,1,1464072499,0 predictor::https://www.google.com/cse/style/look/shiny.css 1,1,1464072499,0 predictor::https://www.google.com/uds/api/search/1.0/b16e3ffbc96e4526fdc0cc8394bf713a/default+en.I.js 1,1,1464072499,0 predictor::https://srv.carbonads.net/ads/C6AILKT.json?segment=placement:rvmio&callback=_carbonads_go 1,1,1464072499,0 predictor::https://fallbacks.carbonads.com/home/e99a260b94849497ea962f674f0aebd9//rvmio/8/ 1,1,1464072499,0 predictor::https://www.googleapis.com/generate_204 1,1,1464072499,0 predictor::https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js 1,1,1464072499,0 predictor::https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js 1,1,1464072499,0 predictor::https://fallbacks.carbonads.com/nosvn/fallbacks/988ef98ee02da9e570d1b7ac863c5959.png 1,1,1464072499,0 predictor::https://www.google-analytics.com/analytics.js 1,1,1464072499,0 predictor::https://cse.google.com/adsense/search/async-ads.js 1,1,1464072499,0 predictor::https://www.google.com/cse/static/en/google_custom_search_watermark.gif 1,1,1464072499,0 predictor::https://www.google.com/uds/css/small-logo.png 1,1,1464072499,0 predictor::https://clients1.google.com/generate_204 1,1,1464072499,0 predictor::https://www.google-analytics.com/r/collect?v=1&_v=j43&a=1109845766&t=pageview&_s=1&dl=https%3A%2F%2Frvm.io%2Frvm%2Finstall&ul=en-us&de=UTF-8&dt=RVM%3A%20Ruby%20Version%20Manager%20-%20Installing%20RVM&sd=24-bit&sr=800x600&vp=722x469&je=0&_u=AEAAAAABI~&jid=832547807&cid=31928893.1464072526&tid=UA-24992786-1&_r=1&z=1121122165 1,1,1464072499,0 predictor::https://www.google-analytics.com/r/collect?v=1&_v=j43&a=1109845766&t=pageview&_s=1&dl=https%3A%2F%2Frvm.io%2Frvm%2Finstall&ul=en-us&de=UTF-8&dt=RVM%3A%20Ruby%20Version%20Manager%20-%20Installing%20RVM&sd=24-bit&sr=800x600&vp=722x469&je=0&_u=AECAAAABI~&jid=1808384844&cid=31928893.1464072526&tid=UA-45354940-1&_r=1&z=1944918891 1,1,1464072499,0   ‚¬

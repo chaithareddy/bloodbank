@@ -1,0 +1,45 @@
+<%= form_for(@bb) do |f| %>
+  <% if @bb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bb.errors.count, "error") %> prohibited this bb from being saved:</h2>
+
+      <ul>
+      <% @bb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name_of_BB %><br>
+    <%= f.text_field :Name_of_BB %>
+  </div>
+  <div class="field">
+    <%= f.label :Blood_type %><br>
+    <%= f.text_field :Blood_type %>
+  </div>
+  <div class="field">
+    <%= f.label :Quantity %><br>
+    <%= f.text_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_area :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_Number %><br>
+    <%= f.text_field :contact_Number %>
+  </div>
+  <div class="field">
+    <%= f.label :email_id %><br>
+    <%= f.text_field :email_id %>
+  </div>
+  <div class="field">
+    <%= f.label :working_hour %><br>
+    <%= f.text_field :working_hour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

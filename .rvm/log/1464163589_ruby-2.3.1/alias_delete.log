@@ -1,0 +1,91 @@
+[2016-05-25 01:06:30] alias_delete_execute
+alias_delete_execute () 
+{ 
+    for _path in "$rvm_rubies_path" "$rvm_environments_path" "$rvm_wrappers_path";
+    do
+        if [[ -L "$_path/$1" ]]; then
+            \command \rm -fv "$_path/$1" || return $?;
+        fi;
+    done;
+    __rvm_db_ "$rvm_path/config/alias" "$1" "delete";
+    alias_after_delete_default "$1" || return $?
+}
+current path: /home/chaitanyareddy
+GEM_HOME=/home/chaitanyareddy/.rvm/gems/ruby-2.3.1
+PATH=/home/chaitanyareddy/.rvm/gems/ruby-2.3.1/bin:/home/chaitanyareddy/.rvm/gems/ruby-2.3.1@global/bin:/home/chaitanyareddy/.rvm/rubies/ruby-2.3.1/bin:/home/chaitanyareddy/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+GEM_PATH=/home/chaitanyareddy/.rvm/gems/ruby-2.3.1:/home/chaitanyareddy/.rvm/gems/ruby-2.3.1@global
+command(2): alias_delete_execute default
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /home/chaitanyareddy/.rvm/rubies/default ]]
++ command rm -fv /home/chaitanyareddy/.rvm/rubies/default
++ rm -fv /home/chaitanyareddy/.rvm/rubies/default
+removed '/home/chaitanyareddy/.rvm/rubies/default'
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /home/chaitanyareddy/.rvm/environments/default ]]
++ command rm -fv /home/chaitanyareddy/.rvm/environments/default
++ rm -fv /home/chaitanyareddy/.rvm/environments/default
+removed '/home/chaitanyareddy/.rvm/environments/default'
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /home/chaitanyareddy/.rvm/wrappers/default ]]
++ command rm -fv /home/chaitanyareddy/.rvm/wrappers/default
++ rm -fv /home/chaitanyareddy/.rvm/wrappers/default
+removed '/home/chaitanyareddy/.rvm/wrappers/default'
++ __rvm_db_ /home/chaitanyareddy/.rvm/config/alias default delete
++ typeset __db __key __value
++ __db=/home/chaitanyareddy/.rvm/config/alias
++ __key=default
++ shift 2
++ __value=delete
++ case "${__value}" in
++ __rvm_db_remove /home/chaitanyareddy/.rvm/config/alias default
++ [[ -f /home/chaitanyareddy/.rvm/config/alias ]]
++ __rvm_sed -e '\#^default=# d' -e '/^$/d' /home/chaitanyareddy/.rvm/config/alias
++ sed -e '\#^default=# d' -e '/^$/d' /home/chaitanyareddy/.rvm/config/alias
++ command mv -f /home/chaitanyareddy/.rvm/config/alias.new /home/chaitanyareddy/.rvm/config/alias
++ mv -f /home/chaitanyareddy/.rvm/config/alias.new /home/chaitanyareddy/.rvm/config/alias
++ alias_after_delete_default default
++ [[ default == \d\e\f\a\u\l\t ]]
++ for _path in '"$rvm_bin_path"/default_*'
++ [[ -f /home/chaitanyareddy/.rvm/bin/default_* ]]
++ _path='/home/chaitanyareddy/.rvm/bin/default_*'
++ [[ -f /home/chaitanyareddy/.rvm/bin/default_* ]]
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path='*'
++ command rm -fv '/home/chaitanyareddy/.rvm/bin/*'
++ rm -fv '/home/chaitanyareddy/.rvm/bin/*'
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=gem
++ command rm -fv /home/chaitanyareddy/.rvm/bin/gem
++ rm -fv /home/chaitanyareddy/.rvm/bin/gem
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=irb
++ command rm -fv /home/chaitanyareddy/.rvm/bin/irb
++ rm -fv /home/chaitanyareddy/.rvm/bin/irb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=erb
++ command rm -fv /home/chaitanyareddy/.rvm/bin/erb
++ rm -fv /home/chaitanyareddy/.rvm/bin/erb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=ri
++ command rm -fv /home/chaitanyareddy/.rvm/bin/ri
++ rm -fv /home/chaitanyareddy/.rvm/bin/ri
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=rdoc
++ command rm -fv /home/chaitanyareddy/.rvm/bin/rdoc
++ rm -fv /home/chaitanyareddy/.rvm/bin/rdoc
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=testrb
++ command rm -fv /home/chaitanyareddy/.rvm/bin/testrb
++ rm -fv /home/chaitanyareddy/.rvm/bin/testrb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=rake
++ command rm -fv /home/chaitanyareddy/.rvm/bin/rake
++ rm -fv /home/chaitanyareddy/.rvm/bin/rake
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=ruby
++ command rm -fv /home/chaitanyareddy/.rvm/bin/ruby
++ rm -fv /home/chaitanyareddy/.rvm/bin/ruby
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=bundle
++ command rm -fv /home/chaitanyareddy/.rvm/bin/bundle
++ rm -fv /home/chaitanyareddy/.rvm/bin/bundle

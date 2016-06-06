@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @obt.location %>
+</p>
+
+<p>
+  <strong>B group:</strong>
+  <%= @obt.b_group %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @obt.name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @obt.contact %>
+</p>
+
+<%= link_to 'Edit', edit_obt_path(@obt) %> |
+<%= link_to 'Back', obts_path %>
