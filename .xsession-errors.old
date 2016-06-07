@@ -1,2 +1,41 @@
 openConnection: connect: No such file or directory
 cannot connect to brltty at :0
+upstart: window-stack-bridge main process (1697) killed by HUP signal
+upstart: bamfdaemon main process (1754) killed by TERM signal
+upstart: unity-settings-daemon main process (1796) terminated with status 1
+upstart: unity7 main process (1809) terminated with status 1
+upstart: unity-panel-service main process (1817) terminated with status 1
+upstart: indicator-messages main process (1856) killed by HUP signal
+upstart: indicator-bluetooth main process (1857) killed by TERM signal
+upstart: indicator-power main process (1864) killed by TERM signal
+upstart: indicator-datetime main process (1871) killed by TERM signal
+upstart: indicator-keyboard main process (1872) killed by HUP signal
+upstart: indicator-sound main process (1873) killed by HUP signal
+upstart: indicator-printers main process (1881) killed by TERM signal
+upstart: indicator-session main process (1884) killed by TERM signal
+upstart: indicator-application main process (1886) killed by TERM signal
+upstart: indicator-application pre-stop process (6691) killed by TERM signal
+upstart: gnome-session (Unity) pre-stop process (6693) killed by TERM signal
+upstart: job indicator-application failed to stop
+upstart: job upstart-udev-bridge failed to stop
+upstart: job dbus failed to stop
+upstart: job gnome-session (Unity) failed to stop
+upstart: job unity7 failed to stop
+upstart: job upstart-dbus-session-bridge failed to stop
+upstart: job gpg-agent failed to stop
+upstart: job indicator-messages failed to stop
+upstart: job indicator-bluetooth failed to stop
+upstart: job unity-panel-service failed to stop
+upstart: job hud failed to stop
+upstart: job im-config failed to stop
+upstart: job upstart-dbus-system-bridge failed to stop
+upstart: job indicator-power failed to stop
+upstart: job indicator-datetime failed to stop
+upstart: job indicator-keyboard failed to stop
+upstart: job unity-settings-daemon failed to stop
+upstart: job indicator-sound failed to stop
+upstart: job upstart-file-bridge failed to stop
+upstart: job bamfdaemon failed to stop
+upstart: job window-stack-bridge failed to stop
+upstart: job indicator-printers failed to stop
+upstart: job indicator-session failed to stop

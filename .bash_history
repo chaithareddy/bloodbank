@@ -360,3 +360,11 @@ rake db:migrate
 rails c
 rails g controller Teacher list_of_Teachers
 rails s
+cd bs-app/
+rails s
+cd ..
+git init
+git add .
+git commit -m "first commit"
+git remote add origin http://github.com/chaithareddy/bloodbank.git
+git push -u origin master

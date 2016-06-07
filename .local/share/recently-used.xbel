@@ -461,7 +461,7 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/chaitanyareddy/bs-app/config/routes.rb" added="2016-06-04T07:15:35Z" modified="2016-06-05T06:28:23Z" visited="2016-06-04T07:15:35Z">
+  <bookmark href="file:///home/chaitanyareddy/bs-app/config/routes.rb" added="2016-06-04T07:15:35Z" modified="2016-06-06T07:34:16Z" visited="2016-06-04T07:15:35Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="application/x-ruby"/>
@@ -469,8 +469,8 @@
           <bookmark:group>gedit</bookmark:group>
         </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="nautilus" exec="&apos;nautilus --new-window %U&apos;" modified="2016-06-05T06:20:52Z" count="12"/>
-          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2016-06-05T06:28:23Z" count="15"/>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2016-06-06T07:21:44Z" count="13"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2016-06-06T07:34:16Z" count="17"/>
         </bookmark:applications>
       </metadata>
     </info>
